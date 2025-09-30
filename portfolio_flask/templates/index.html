@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>About Me</h2>
+<p>{{ about.summary }}</p>
+<p><strong>Current CGPA:</strong> {{ about.cgpa }}</p>
+
+<h2>Projects</h2>
+<ul>
+  {% for project in projects %}
+    <li><strong>{{ project.title }}</strong> - {{ project.desc }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Certificates</h2>
+<ul>
+  {% for cert in certificates %}
+    <li>{{ cert }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
